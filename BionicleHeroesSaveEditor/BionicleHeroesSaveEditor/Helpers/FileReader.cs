@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace BionicleHeroesSaveEditor.Helpers
 {
-    internal class FileReader
+    internal class FileOperations
     {
         public static List<byte> SaveDataBytes = new List<byte>();
 

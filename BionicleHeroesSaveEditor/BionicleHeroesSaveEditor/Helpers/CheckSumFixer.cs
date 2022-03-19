@@ -7,6 +7,7 @@ namespace BionicleHeroesSaveEditor.Helpers
 {
     internal static class CheckSumFixer
     {
+        //Huge Thanks to PollyPlayz on Github
         public static byte[] FixCheckSum(List<byte> saveFile)
         {
             uint checkSum = 0;
