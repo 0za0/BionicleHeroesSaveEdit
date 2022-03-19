@@ -1,0 +1,40 @@
+﻿<Window x:Class="BionicleHeroesSaveEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BionicleHeroesSaveEditor"
+        mc:Ignorable="d"
+        Title="Bionicle Heroes Save Editor" Height="450" Width="245">
+    <Grid>
+        <StackPanel Width="229" HorizontalAlignment="Center">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Margin" Value="10,10,0,0"/>
+                </Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Setter Property="Margin" Value="10,10,0,0"/>
+                </Style>
+            </StackPanel.Resources>
+
+
+            <StackPanel x:Name="__" Orientation="Horizontal"  HorizontalAlignment="Left" Height="38">
+                <StackPanel.Resources>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Margin" Value="10,0,0,0"/>
+                    </Style>
+                    <Style TargetType="{x:Type TextBox}">
+                        <Setter Property="Margin" Value="10,10,0,0"/>
+                    </Style>
+                </StackPanel.Resources>
+                <TextBox x:Name="FilePath" Text="/Path/Path/Path" Height="24" Width="127" />
+                <Button Content="Load File" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" VerticalAlignment="Top" Height="20" Click="Button_Click"/>
+            </StackPanel>
+
+            <TextBox x:Name="MoneyAmount" Text="M o n e y" Height="23" />
+            <TextBox x:Name="CheckSumTextBox" Text="Checksum" Height="23"  IsUndoEnabled="False" IsReadOnly="True" />
+            <Button x:Name="GenerateNew" Content="Generate New Save" Click="GenerateNew_Click"/>
+
+        </StackPanel>
+    </Grid>
+</Window>
