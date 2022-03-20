@@ -1,0 +1,146 @@
+﻿<Window x:Class="HeroSaveEditDebugging.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HeroSaveEditDebugging"
+        xmlns:control="clr-namespace:WpfHexaEditor;assembly=WPFHexaEditor"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="211*" />
+            <RowDefinition Height="205*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1" Grid.Column="1" Margin="5,0,5,0">
+            <control:HexEditor
+                x:Name="FirstFile"
+                Margin="0,26,0,0"
+                AllowAutoHighLightSelectionByte="False"
+                PreloadByteInEditorMode="MaxVisibleLineExtended"
+                ReadOnlyMode="True"
+                VerticalScrollBarChanged="FirstFile_VerticalScrollBarChanged" />
+            <Label
+                Height="26"
+                VerticalAlignment="Top"
+                Content="{Binding FileName, ElementName=FirstFile, UpdateSourceTrigger=PropertyChanged}" />
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="2" Margin="5,0,5,0">
+            <control:HexEditor
+                x:Name="SecondFile"
+                Margin="0,26,0,0"
+                AllowAutoHighLightSelectionByte="False"
+                PreloadByteInEditorMode="MaxVisibleLineExtended"
+                ReadOnlyMode="True"
+                VerticalScrollBarChanged="SecondFile_VerticalScrollBarChanged" />
+            <Label
+                Height="26"
+                VerticalAlignment="Top"
+                Content="{Binding FileName, ElementName=FirstFile, UpdateSourceTrigger=PropertyChanged}" />
+        </Grid>
+        <Grid
+            Grid.Row="2"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            Margin="0,1,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="128*" />
+                <ColumnDefinition Width="343*" />
+                <ColumnDefinition Width="343*" />
+            </Grid.ColumnDefinitions>
+
+            <Label
+                Grid.Column="1"
+                Height="26"
+                Margin="7,0,3,0"
+                Padding="0,5,5,5"
+                VerticalAlignment="Top"
+                Content="List of the different blocks of bytes between the two loaded files"
+                FontWeight="Bold" />
+
+
+            <Border
+                Grid.Column="1"
+                Margin="5,26,5,5"
+                BorderBrush="Gray"
+                BorderThickness="1">
+                <Grid>
+                    <StackPanel x:Name="FileDiffBlockList" Margin="0,0,17,0" />
+
+                    <ScrollBar
+                        x:Name="BlockItemProgress"
+                        Width="17"
+                        Margin="1,1,1,1"
+                        HorizontalAlignment="Right"
+                        Orientation="Vertical"
+                        ValueChanged="BlockItemProgress_ValueChanged" />
+                </Grid>
+            </Border>
+
+     
+            <Button
+                Height="26"
+                Margin="5,26,5,0"
+                VerticalAlignment="Top"
+                Click="FindDifferenceButton_Click"
+                Content="Find the differences" />
+
+            
+
+            
+            <Label
+                Grid.Column="2"
+                Height="26"
+                Margin="5,0,5,0"
+                Padding="0,5,5,5"
+                VerticalAlignment="Top"
+                Content="List of different bytes in the selected block"
+                FontWeight="Bold" />
+
+            <ListBox
+                x:Name="FileDiffBytesList"
+                Grid.Column="2"
+                Margin="5,26,5,5"
+                SelectionChanged="FileDiffBytesList_SelectionChanged" />
+        </Grid>
+
+        <!-- <Button
+            x:Name="FirstHexEditor"
+            Width="159"
+            Height="26"
+            Margin="5,0,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Click="FirstHexEditor_Click"
+            Content="Load first file to compare" />
+
+        <Button
+            x:Name="SecondHexEditor"
+            Grid.Column="1"
+            Width="177"
+            Height="26"
+            Margin="5,0,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Click="SecondHexEditor_Click"
+            Content="Load second file to compare" />
+        <Button
+            x:Name="SaveChangeButton"
+            Grid.Column="1"
+            Width="84"
+            Height="26"
+            Margin="187,0,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Click="SaveChangeButton_Click"
+            Content="Save changes" />-->
+    </Grid>
+
+</Window>
