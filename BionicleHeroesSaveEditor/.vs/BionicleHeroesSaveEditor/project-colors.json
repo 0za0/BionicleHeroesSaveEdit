@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "bd0a7df7-5114-49e1-b17e-df4f6a95c352": {
+      "ProjectGuid": "bd0a7df7-5114-49e1-b17e-df4f6a95c352",
+      "DisplayName": "HeroSaveEditDebugging",
+      "ColorIndex": 0
+    },
+    "590d90cb-29d3-4660-b98b-59e518ddd8a9": {
+      "ProjectGuid": "590d90cb-29d3-4660-b98b-59e518ddd8a9",
+      "DisplayName": "BionicleHeroesSaveEditor",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 2
+}
