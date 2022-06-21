@@ -4,10 +4,53 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BionicleHeroesSaveEditor"
+        xmlns:controls="clr-namespace:BionicleHeroesSaveEditor.Controls"
         mc:Ignorable="d"
-        Title="Bionicle Heroes Save Editor" Height="450" Width="245">
+        Title="Bionicle Heroes Save Editor" Height="920" Width="1067">
     <Grid>
-        <StackPanel Width="229" HorizontalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="4*" />
+        </Grid.ColumnDefinitions>
+        <TabControl Grid.Column="1">
+            <TabItem Header="Toa">
+                <UniformGrid >
+                    <controls:ToaConfig x:Name="JallerConfig"/>
+                    <controls:ToaConfig x:Name="HahliConfig"/>
+                    <controls:ToaConfig x:Name="KonguConfig"/>
+                    <controls:ToaConfig x:Name="MatoroConfig"/>
+                    <controls:ToaConfig x:Name="HewkiiConfig"/>
+                    <controls:ToaConfig x:Name="NuparuConfig"/>
+                </UniformGrid>
+            </TabItem>
+
+            <TabItem Header="Unlockables and Money">
+                <Grid Background="#FFE5E5E5">
+                    <StackPanel Margin="20 10 0 0">
+                        <StackPanel.Resources>
+                            <Style TargetType="{x:Type CheckBox}">
+                                <Setter Property="Margin" Value="0,10,0,0"/>
+                            </Style>
+                        </StackPanel.Resources>
+                        <Label Content="Piece Count" />
+                        <TextBox x:Name="MoneyTextBox" Height="20" Width="150" Text="" HorizontalAlignment="Left" />
+                        <Label  Content="Pieces Spent" />
+                        <TextBox x:Name="MoneySpentTextBox" Height="20" Width="150" Text="" HorizontalAlignment="Left" />
+                        <CheckBox Content="Left and Right Arches in Hub Open" IsEnabled="False" />
+                        <CheckBox Content="Achievement Door Open" IsEnabled="False" />
+                        <CheckBox Content="Vezok Door Open" IsEnabled="False" />
+                        <CheckBox Content="Hakann Door Open" IsEnabled="False" />
+                        <CheckBox Content="Avak Door Open" IsEnabled="False" />
+                        <CheckBox Content="Thok Door Open" IsEnabled="False" />
+                        <CheckBox Content="Zaktans Door Open" IsEnabled="False" />
+                        <CheckBox Content="Reidaks Door Open" IsEnabled="False" />
+                        <CheckBox Content="Vezons Door Open" IsEnabled="False" />
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+        <StackPanel Width="207" HorizontalAlignment="Center" Margin="0,-4,0,4">
             <StackPanel.Resources>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Margin" Value="10,10,0,0"/>
@@ -18,7 +61,7 @@
             </StackPanel.Resources>
 
 
-            <StackPanel x:Name="__" Orientation="Horizontal"  HorizontalAlignment="Left" Height="38">
+            <StackPanel Margin="0 20" x:Name="__" Orientation="Horizontal"  HorizontalAlignment="Left" Height="38" Width="206">
                 <StackPanel.Resources>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Margin" Value="10,0,0,0"/>
@@ -28,10 +71,9 @@
                     </Style>
                 </StackPanel.Resources>
                 <TextBox x:Name="FilePath" Text="/Path/Path/Path" Height="24" Width="127" />
-                <Button Content="Load File" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" VerticalAlignment="Top" Height="20" Click="Button_Click"/>
+                <Button Content="Load File" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Height="26" Click="Button_Click" Width="55"/>
             </StackPanel>
 
-            <TextBox x:Name="MoneyAmount" Text="M o n e y" Height="23" />
             <TextBox x:Name="CheckSumTextBox" Text="Checksum" Height="23"  IsUndoEnabled="False" IsReadOnly="True" />
             <Button x:Name="GenerateNew" Content="Generate New Save" Click="GenerateNew_Click"/>
 

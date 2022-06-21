@@ -7,4 +7,38 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Images\ToaHeads\hahli.png" />
+    <None Remove="Images\ToaHeads\hewkii.png" />
+    <None Remove="Images\ToaHeads\jaller.png" />
+    <None Remove="Images\ToaHeads\kongu.png" />
+    <None Remove="Images\ToaHeads\matoro.png" />
+    <None Remove="Images\ToaHeads\nuparu.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="BionicleHeroesSaveEditor\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\ToaHeads\hahli.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\ToaHeads\hewkii.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\ToaHeads\jaller.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\ToaHeads\kongu.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\ToaHeads\matoro.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\ToaHeads\nuparu.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
 </Project>
