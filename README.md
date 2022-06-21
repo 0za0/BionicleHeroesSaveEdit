@@ -1,10 +1,15 @@
 # BionicleHeroesSaveEdit
-Bionicle Heroes Save Editor
+A Save Editor for the Game Bionicle Heroes! (WiP)
 
-**Huge Thanks to PollyPlayz and everyone involved for figuring out the Star Wars Save Data stuff**
+# Bugs/Issues/Feedback
+Please contact me on discord if you have anything to say.
+kansokusha#3132
 
+# Planned Features
+- Individual Level Activation (Figured Out, Not implemented yet)
+- All Shop Items (Figured Out, Not implemented yet)
+- Enemy Kill Flags (Figured Out, Not implemented)
+- Canisters per level (Looking into it)
 
-No releases yet. 
-
-
-.NET 6.0
+# Money
+Current Piece Count = Current Pieces - Spent Pieces
