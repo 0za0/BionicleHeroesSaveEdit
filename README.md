@@ -9,6 +9,8 @@ kansokusha#3132
 1) Press Load File and load your file
 2) Edit what you want
 3) Press "Generate Save File"
+
+
 **The save file will be generated next to the Save Editor EXE and will not be automatically placed in the right folder** 
 
 
