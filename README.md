@@ -4,8 +4,10 @@ A Save Editor for the Game Bionicle Heroes! (WiP)
 
 
 # Bugs/Issues/Feedback
+Discord: kansokusha#3132
+
 Please contact me on discord if you have anything to say.
-kansokusha#3132
+
 
 # Usage
 1) Press Load File and load your file
