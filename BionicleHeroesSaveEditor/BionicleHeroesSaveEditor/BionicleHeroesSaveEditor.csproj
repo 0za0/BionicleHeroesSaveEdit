@@ -5,6 +5,11 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <Authors>Nullpo</Authors>
+    <Description>A Save Editor for the game Bionicle Heroes!</Description>
+    <Copyright>Nullpo</Copyright>
+    <PackageIcon>HeroHookDLLLogo.png</PackageIcon>
+    <ApplicationIcon>herohookdlllogo_x8D_icon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,6 +19,10 @@
     <None Remove="Images\ToaHeads\kongu.png" />
     <None Remove="Images\ToaHeads\matoro.png" />
     <None Remove="Images\ToaHeads\nuparu.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="herohookdlllogo_x8D_icon.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -39,6 +48,13 @@
     <Resource Include="Images\ToaHeads\nuparu.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Images\HeroHookDLLLogo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

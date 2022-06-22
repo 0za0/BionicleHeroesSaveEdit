@@ -24,7 +24,7 @@
                 </UniformGrid>
             </TabItem>
 
-            <TabItem Header="Unlockables and Money">
+            <TabItem Header="Shop and Money">
                 <Grid Background="#FFE5E5E5">
                     <StackPanel Margin="20 10 0 0">
                         <StackPanel.Resources>
@@ -36,18 +36,135 @@
                         <TextBox x:Name="MoneyTextBox" Height="20" Width="150" Text="" HorizontalAlignment="Left" />
                         <Label  Content="Pieces Spent" />
                         <TextBox x:Name="MoneySpentTextBox" Height="20" Width="150" Text="" HorizontalAlignment="Left" />
-                        <CheckBox Content="Left and Right Arches in Hub Open" IsEnabled="False" />
-                        <CheckBox Content="Achievement Door Open" IsEnabled="False" />
-                        <CheckBox Content="Vezok Door Open" IsEnabled="False" />
-                        <CheckBox Content="Hakann Door Open" IsEnabled="False" />
-                        <CheckBox Content="Avak Door Open" IsEnabled="False" />
-                        <CheckBox Content="Thok Door Open" IsEnabled="False" />
-                        <CheckBox Content="Zaktans Door Open" IsEnabled="False" />
-                        <CheckBox Content="Reidaks Door Open" IsEnabled="False" />
-                        <CheckBox Content="Vezons Door Open" IsEnabled="False" />
+
                     </StackPanel>
                 </Grid>
             </TabItem>
+            <TabItem Header="Levels">
+                <Grid>
+                    <ScrollViewer>
+                        <StackPanel Margin="20 10 0 0">
+                            <StackPanel.Resources>
+                                <Style TargetType="{x:Type CheckBox}">
+                                    <Setter Property="Margin" Value="0,10,0,0"/>
+                                </Style>
+                            </StackPanel.Resources>
+
+                            <CheckBox x:Name="ArchesCheckbox" Content="Left and Right Arches in Hub Open"  />
+                            <CheckBox x:Name="AchievementDoorCheckbox" Content="Achievement Door Open"  />
+
+
+                            <!-- Hakann -->
+                            <CheckBox x:Name="UnlockHakann" Content="Hakann Door Open" />
+                            <StackPanel x:Name="HakannLevels" Visibility="Visible" Margin="20 10 0 0">
+                                <StackPanel.Resources>
+                                    <Style TargetType="{x:Type CheckBox}">
+                                        <Setter Property="Margin" Value="0,10,0,0"/>
+                                    </Style>
+                                </StackPanel.Resources>
+
+                                <CheckBox Content="Scorched Earth"  />
+                                <CheckBox Content="Volcanic Trail"  />
+                                <CheckBox Content="Fiery Mine"  />
+                                <CheckBox Content="Hakanns Pit"  />
+
+                            </StackPanel>
+
+
+                            <!-- Vezok -->
+                            <CheckBox x:Name="UnlockVezok" Content="Vezoks Door Open"  />
+                            <StackPanel x:Name="VezokLevels" Visibility="Visible" Margin="20 10 0 0">
+                                <StackPanel.Resources>
+                                    <Style TargetType="{x:Type CheckBox}">
+                                        <Setter Property="Margin" Value="0,10,0,0"/>
+                                    </Style>
+                                </StackPanel.Resources>
+
+                                <CheckBox Content="Piraka Bluff"  />
+                                <CheckBox Content="Smuggler's Cove"  />
+                                <CheckBox Content="Shattered Wreck"  />
+                                <CheckBox Content="Vezok's Deluge"  />
+
+                            </StackPanel>
+
+                            <!-- Avak -->
+                            <CheckBox x:Name="UnlockAvak" Content="Avak Door Open" />
+                            <StackPanel x:Name="AvakLevels" Visibility="Visible" Margin="20 10 0 0">
+                                <StackPanel.Resources>
+                                    <Style TargetType="{x:Type CheckBox}">
+                                        <Setter Property="Margin" Value="0,10,0,0"/>
+                                    </Style>
+                                </StackPanel.Resources>
+
+                                <CheckBox Content="Decrepit Dungeons"  />
+                                <CheckBox Content="Cleansing Plant" />
+                                <CheckBox Content="Menacing Keep" />
+                                <CheckBox Content="Avak's Dynamo"  />
+
+                            </StackPanel>
+
+                            <!-- Thok -->
+                            <CheckBox x:Name="UnlockThok" Content="Thok Door Open"  />
+                            <StackPanel x:Name="ThokLevels" Visibility="Visible" Margin="20 10 0 0">
+                                <StackPanel.Resources>
+                                    <Style TargetType="{x:Type CheckBox}">
+                                        <Setter Property="Margin" Value="0,10,0,0"/>
+                                    </Style>
+                                </StackPanel.Resources>
+
+                                <CheckBox Content="Flooded Lowlands"  />
+                                <CheckBox Content="Mountain Path"  />
+                                <CheckBox Content="Blizzard Peaks"  />
+                                <CheckBox Content="Thok's Grotto" />
+
+                            </StackPanel>
+
+                            <!-- Thok -->
+                            <CheckBox x:Name="UnlockZaktan" Content="Zaktans Door Open" />
+                            <StackPanel x:Name="ZaktanLevels" Visibility="Visible" Margin="20 10 0 0">
+                                <StackPanel.Resources>
+                                    <Style TargetType="{x:Type CheckBox}">
+                                        <Setter Property="Margin" Value="0,10,0,0"/>
+                                    </Style>
+                                </StackPanel.Resources>
+
+                                <CheckBox Content="Logging Post"  />
+                                <CheckBox Content="Ancient Forest"  />
+                                <CheckBox Content="Forgotten Shrine" />
+                                <CheckBox Content="Zaktans Chamber"  />
+
+                            </StackPanel>
+
+                            <!-- Reidak -->
+                            <CheckBox x:Name="UnlockReidak" Content="Reidaks Door Open" />
+                            <StackPanel x:Name="ReidakLevels" Visibility="Visible" Margin="20 10 0 0">
+                                <StackPanel.Resources>
+                                    <Style TargetType="{x:Type CheckBox}">
+                                        <Setter Property="Margin" Value="0,10,0,0"/>
+                                    </Style>
+                                </StackPanel.Resources>
+
+                                <CheckBox Content="Desert Outpost"  />
+                                <CheckBox Content="Bleak Refinery"  />
+                                <CheckBox Content="Ancient Citadel"  />
+                                <CheckBox Content="Reidak's Bastion"  />
+
+                            </StackPanel>
+                            <CheckBox x:Name="VezonOpenCheckBox" Content="Vezons Door Open"  />
+                            <StackPanel Visibility="Visible" Margin="20 10 0 0">
+                                <StackPanel.Resources>
+                                    <Style TargetType="{x:Type CheckBox}">
+                                        <Setter Property="Margin" Value="0,10,0,0"/>
+                                    </Style>
+                                </StackPanel.Resources>
+                                <CheckBox x:Name="VezonFinishedCheckBox" Content="Level Complete"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+
+            </TabItem>
+
         </TabControl>
 
         <StackPanel Width="207" HorizontalAlignment="Center" Margin="0,-4,0,4">
