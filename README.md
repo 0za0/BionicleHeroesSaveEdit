@@ -20,7 +20,7 @@ Please contact me on discord if you have anything to say.
 
 # Planned Features
 - ~~Individual Level Activation (Figured Out, Not implemented yet)~~
-- All Shop Items (Figured Out, Not implemented yet)
+- ~~All Shop Items (Figured Out, Not implemented yet)~~
 - Enemy Kill Flags (Figured Out, Not implemented)
 - Canisters per level (Looking into it)
 - Complete Re-Write to a Cross-Platform UI Framework (tl;dr Linux/Mac Support)
