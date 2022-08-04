@@ -36,7 +36,25 @@
                         <TextBox x:Name="MoneyTextBox" Height="20" Width="150" Text="" HorizontalAlignment="Left" />
                         <Label  Content="Pieces Spent" />
                         <TextBox x:Name="MoneySpentTextBox" Height="20" Width="150" Text="" HorizontalAlignment="Left" />
-
+                        <StackPanel x:Name="ShopItems" >
+                            <CheckBox Content="50% Discount"/>
+                            <CheckBox Content="Piraka Diving Board"/>
+                            <CheckBox Content="Piraka VIP Lounge"/>
+                            <CheckBox Content="Piraka DJ Booth"/>
+                            <CheckBox Content="Piraka Dance Floor"/>
+                            <CheckBox Content="Piraka Fitness Equipment"/>
+                            <CheckBox Content="Piraka Bucking Bronco"/>
+                            <CheckBox Content="Piraka Lounger"/>
+                            <CheckBox Content="Piraka Sand Castle"/>
+                            <CheckBox Content="Piraka Shooting Gallery"/>
+                            <CheckBox Content="Piraka Wind Surfer"/>
+                            <CheckBox Content="Piraka Pedalo"/>
+                            <CheckBox Content="Piraka Seesaw"/>
+                            <CheckBox Content="Bonus Level 1"/>
+                            <CheckBox Content="Bonus Level 2"/>
+                            <CheckBox Content="Bonus Level 3"/>
+                            <CheckBox Content="Canister Locator"/>
+                        </StackPanel>
                     </StackPanel>
                 </Grid>
             </TabItem>

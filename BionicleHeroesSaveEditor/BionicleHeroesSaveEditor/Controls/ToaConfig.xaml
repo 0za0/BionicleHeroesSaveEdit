@@ -17,6 +17,6 @@
         <TextBox x:Name="ToaWeaponUpgradesTextBox" Height="20"  Margin="25 0 25 0"/>
 
         <Label Content="Killed Enemies" Height="25" Margin="0 0 0 0" />
-        <TextBox x:Name="ToaEnemyKillCountTextBox" Height="20"  Margin="25 0 25 0" IsEnabled="False"/>
+        <TextBox x:Name="ToaEnemyKillCountTextBox" Height="20"  Margin="25 0 25 0" />
     </StackPanel>
 </UserControl>
