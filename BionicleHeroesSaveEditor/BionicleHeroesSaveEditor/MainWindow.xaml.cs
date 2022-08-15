@@ -105,7 +105,7 @@ namespace BionicleHeroesSaveEditor
         private void FillStoreCheckBoxes()
         {
             int storeLocation = 0x69;
-            for (int i = 0; i < 16; i++)
+            for (int i = 0; i <= 16; i++)
             {
                 ((CheckBox)ShopItems.Children[i]).IsChecked = Helpers.FileOperations.SaveDataBytes[storeLocation] != 0;
                 storeLocation++;
@@ -184,7 +184,7 @@ namespace BionicleHeroesSaveEditor
 
             //Store stuff
             int storeLocation = 0x69;
-            for (int i = 0; i < 16; i++)
+            for (int i = 0; i <= 16; i++)
             {
                 Helpers.FileOperations.SaveDataBytes[storeLocation] = ((CheckBox)ShopItems.Children[i]).IsChecked == true ? (byte)1 : (byte)0;
                 storeLocation++;
@@ -194,15 +194,6 @@ namespace BionicleHeroesSaveEditor
         }
         private void GenerateNew_Click(object sender, RoutedEventArgs e)
         {
-            //This is very scuffed code because I just wrote this for the quick "Tech Demo" 
-            //Didn't really do more so dont judge, thanks
-            // int newMoney = int.Parse(MoneyAmount.Text);
-            //byte[] newMoneyBytes = BitConverter.GetBytes(newMoney);
-
-            //Helpers.FileOperations.SaveDataBytes[0xC4] = newMoneyBytes[0];
-            //Helpers.FileOperations.SaveDataBytes[0xC5] = newMoneyBytes[1];
-            //Helpers.FileOperations.SaveDataBytes[0xC6] = newMoneyBytes[2];
-            //Helpers.FileReader.SaveDataBytes[0xC7] = newMoneyBytes[3];
 
             MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Are you sure you want to overwrite your existing save file?", "Overwrite Save File?", System.Windows.MessageBoxButton.YesNo);
             if (messageBoxResult == MessageBoxResult.Yes)
