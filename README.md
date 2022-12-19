@@ -1,5 +1,10 @@
 # BionicleHeroesSaveEdit
 A Save Editor for the Game Bionicle Heroes! (WiP)
+
+I fully reverse engineered the Save-Data Format and made an Editor to manipulate the data.
+
+The Editor also generates a correct hash for the file (The mechanism the game uses to validate save files.) 
+
 ![grafik](https://user-images.githubusercontent.com/43097509/174861370-fbdeec4f-5a28-44ea-a9e9-3be87a6673ca.png)
 
 
